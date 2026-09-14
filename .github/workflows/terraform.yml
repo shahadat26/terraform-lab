@@ -11,7 +11,7 @@ on:
 jobs:
   terraform:
     name: Terraform Validate and Plan
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
 
     steps:
       - name: Checkout
