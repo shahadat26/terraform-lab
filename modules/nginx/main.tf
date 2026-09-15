@@ -16,6 +16,9 @@ resource "docker_container" "nginx" {
   image   = docker_image.nginx.image_id
   restart = "unless-stopped"
 
+  lifecycle {
+    prevent_destroy = true
+  }
   ports {
     internal = 80
     external = var.nginx_port
