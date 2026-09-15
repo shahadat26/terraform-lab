@@ -18,6 +18,10 @@ resource "docker_container" "nginx" {
 
   lifecycle {
     prevent_destroy = true
+
+    ignore_changes = [
+      env
+    ]
   }
   ports {
     internal = 80
