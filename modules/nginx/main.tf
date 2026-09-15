@@ -12,8 +12,8 @@ resource "docker_image" "nginx" {
 }
 
 resource "docker_container" "nginx" {
-  name  = var.container_name
-  image = docker_image.nginx.image_id
+  name    = var.container_name
+  image   = docker_image.nginx.image_id
   restart = "unless-stopped"
 
   ports {
